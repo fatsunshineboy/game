@@ -1,0 +1,168 @@
+:root {
+    --main-bg-color: #713639;
+}
+
+@font-face {
+    font-family: 'xiangsu';
+    src: url("../assets/font/DottedSongtiSquareRegular.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.snakeGame {
+    width: 506px;
+    height: 831px;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    margin: auto;
+    overflow: hidden;
+    background-size: cover;
+    position: relative;
+
+    #play {
+        position: absolute;
+        width: 376px;
+        height: 416px;
+        border: 3px solid #713639;
+        background-color: #713639;
+        position: relative;
+        overflow: hidden;
+        left: 69px;
+        top: 99px;
+
+        #snake {
+            .body{
+                transition: all;
+                position: absolute;
+                left: 0;
+                top: 0;
+                // padding: 2px;
+                width: 10px;
+                height: 10px;
+                background-image: url("../assets/image/snake/body.jpg");
+                background-size: cover;
+            }
+            #head{
+                transition: all;
+                position: absolute;
+                left: 0;
+                top: 0;
+                // padding: 2px;
+                width: 10px;
+                height: 10px;
+                background-size: cover;
+                background-image: url("../assets/image/snake/right.png");
+            }
+        }
+
+        #foods {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            left: -10px;
+            top: -10px;
+            background-image: url("../assets/image/snake/apple.png");
+            background-size: cover;
+        }
+    }
+
+    .gameButton{
+        position: relative;
+        .gameButtonTop{
+            width: 53px;
+            height: 65px;
+            position: absolute;
+            left: 106px;
+            top: 126px;
+            #gameButtonTop{
+                position: absolute;
+                top: 10px;
+            }
+        }
+        .gameButtonLeft{
+            width: 65px;
+            height: 55px;
+            position: absolute;
+            left: 39px;
+            top: 192px;
+            #gameButtonLeft{
+                position: absolute;
+                left: 10px;
+            }
+        }
+        .gameButtonRight{
+            width: 65px;
+            height: 55px;
+            position: absolute;
+            left: 169px;
+            top: 192px;
+            #gameButtonRight{
+                position: absolute;
+                right: 10px;
+            }
+        }
+        .gameButtonBottom{
+            width: 55px;
+            height: 65px;
+            position: absolute;
+            left: 106px;
+            top: 256px;
+            #gameButtonBottom{
+                position: absolute;
+                bottom: 10px;
+            }
+        }
+    }
+
+    .record {
+        opacity: .3;
+        font-family: 'xiangsu','Courier New', Courier, monospace;
+        font-size: 25px;
+        position: absolute;
+        color: white;
+        right: 70px;
+        top: 105px;
+        display: flex;
+        width: 180px;
+        justify-content: space-between;
+    }
+
+    .control {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        left: 300px;
+        top: 530px;
+
+        .controlItem {
+            // color: aquamarine;
+            font-family: 'xiangsu','Courier New', Courier, monospace;
+            background-color: #713639;
+            border: 1px solid rgb(211, 205, 205);
+            color: white;
+            border-radius: 4px;
+            margin-left: 0;
+            width: 100px;
+            height: 30px;
+            margin-top: 20px;
+            line-height: 30px;
+        }
+    }
+}
+
+//重新开始
+.dialog-footer button:first-child {
+    margin-right: 10px;
+}
+
+// 游戏结束
+.el-input {
+    width: 300px;
+}
