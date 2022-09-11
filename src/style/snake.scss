@@ -128,8 +128,11 @@
         right: 70px;
         top: 105px;
         display: flex;
-        width: 180px;
+        width: 280px;
         justify-content: space-between;
+        #score{
+            margin-left: 90px;
+        }
     }
 
     .control {
